@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<executable>
+  <category>dermcli</category>
+  <title>SimpleBlob Detector</title>
+  <description>Simple Blob Detector using opencv </description>
+  <version>0.1.0</version>
+  <license>Apache 2.0</license>
+  <contributor>David Gutman</contributor>
+  <parameters>
+    <label>IO</label>
+    <description>Input/output parameters</description>
+    <image>
+      <name>in_file</name>
+      <label>Input image</label>
+      <channel>input</channel>
+      <index>0</index>
+      <description>Input image</description>
+    </image>
+    <float>
+      <name>threshold</name>
+      <label>Threshold Value</label>
+      <channel>input</channel>
+      <index>1</index>
+      <description>Threshold Value</description>
+    </float>
+    <integer>
+      <name>max_sigma</name>
+      <label>Max Sigma</label>
+      <channel>input</channel>
+      <index>2</index>
+      <description>Max Sigma</description>
+    </integer>
+    <file fileExtensions=".anot" reference="inputImageFile">
+      <name>outputBlobAnnotationFile</name>
+      <label>Output Annotation File for Detected Blobs</label>
+      <description>Output blob annotation file (*.anot)</description>
+      <channel>output</channel>
+      <index>3</index>
+    </file>
+  </parameters>
+</executable>
